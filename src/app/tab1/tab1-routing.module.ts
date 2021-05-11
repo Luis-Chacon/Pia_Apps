@@ -6,11 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-  },
-  {
-    path: 'peli',
-    loadChildren: () => import('./peli-detalle/peli-detalle.module').then( m => m.PeliDetallePageModule)
-  },
+  }
 ];
 
 @NgModule({

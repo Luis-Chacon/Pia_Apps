@@ -24,7 +24,7 @@ export class Peliservice{
 
     getDetails(id:string)
     {
-        return this.http.get<Pelis>(`http://www.omdbapi.com/?i=${id}&plot=full&apikey=${this.apiKey}}`);
+        return this.http.get<Pelis>(`http://www.omdbapi.com/?i=${id}&plot=full&apikey=${this.apiKey}`);
     }
 
 }
