@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Pelis } from '../model/Pelis.models';
 

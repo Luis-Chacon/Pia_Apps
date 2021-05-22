@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'peli/:id',
     loadChildren: () => import('./tab1/peli-detalle/peli-detalle.module').then( m => m.PeliDetallePageModule)
+  },
+  {
+    path: 'Agregar_com',
+    loadChildren: () => import('./tab3/com-detalle/com-detalle.module').then( m => m.ComDetallePageModule)
   }
 ];
 @NgModule({

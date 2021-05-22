@@ -1,8 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
+    <ion-item color="secondary">
     <ion-title>
-      Mi Pagina de Peliculas:3
+      Search page 
     </ion-title>
+    <ion-label slot="end">Dark Mode</ion-label>
+    <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
+  </ion-item>
   </ion-toolbar>
 </ion-header>
 
@@ -11,13 +15,13 @@
   <ion-searchbar [(ngModel)]="term" (ionChange)="searchChanged($event)"></ion-searchbar>
 
   <ion-item>
-    <ion-label>Seleciona tipo de busqueda</ion-label>
+    <ion-label>Select the type of search </ion-label>
     <ion-select [(ngModel)]="type" (ionChanged)="searchChanged($event)">
       
       <ion-select-option selected="true" value="">All</ion-select-option>
-      <ion-select-option value="movie">Peliculas</ion-select-option>
+      <ion-select-option value="movie">Movies</ion-select-option>
       <ion-select-option value="series">Series</ion-select-option>
-      <ion-select-option value="episode">Episodios</ion-select-option>
+      <ion-select-option value="episode">Episodes</ion-select-option>
 
     </ion-select>
   </ion-item>
@@ -37,3 +41,4 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
