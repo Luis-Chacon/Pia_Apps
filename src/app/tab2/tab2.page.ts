@@ -12,23 +12,21 @@ import { PubilicidadServices } from './tab2.service';
 export class Tab2Page {
 
   estrenos : Estrenos[]=[];
-  vid = 'https://www.youtube.com/embed/BpdDN9d9Jio';
 
   constructor(
     private estrenoServices: PubilicidadServices,
     public navCtrl : NavController, 
-    private dom : DomSanitizer) {}
+    private sanitizer : DomSanitizer) {}
 
   ngOnInit()
   {
     this.estrenos = this.estrenoServices.getAllEstrenos();
     console.log(this.estrenos);
-    this.sanitize(this.estrenos[1].trailerUrl);
+
+    this.estrenos.forEach( trailer =>{
+      trailer.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(trailer.trailerUrl);
+    });
   }
 
-  sanitize(estrenoURL: string)
-  {
-    return this.dom.bypassSecurityTrustResourceUrl(this.estrenos[2].trailerUrl);
-  }
 
 }

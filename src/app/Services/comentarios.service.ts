@@ -6,7 +6,18 @@ import { Comentario } from 'src/app/model/Comentarios.models';
 })
 export class ComentariosService {
 
-  public comentarios : Comentario[];
+  public comentarios : Comentario[]=[
+    {
+      userName: 'Enrique Doriloko',
+      resena: 'Me parece muy buena pelicula',
+      titulo: 'Spider-man',
+      },
+    {
+      userName: 'Luis Chacon',
+      resena: 'Me parece muy buena pelicula',
+      titulo: 'Shrek',
+    },
+  ];
   constructor() { }
 
   public getCome() : Comentario[]
@@ -20,7 +31,7 @@ export class ComentariosService {
       {
         userName: comentario.userName,
         titulo: comentario.titulo,
-        reseña: comentario.reseña
+        resena: comentario.resena
       });
   }
 

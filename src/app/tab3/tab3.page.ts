@@ -15,19 +15,9 @@ export class Tab3Page {
     private router: Router
   ) {}
 
-  refresh(ev) {
-
-    setTimeout(() => {
-
-      ev.detail.complete();
-
-    }, 3000);
-
-  }
-
   getComentarios():Comentario[]
   {
-    console.log("getComenatrios Tab3");
+    //console.log("getComenatrios Tab3");
     return this.data.getCome();
 
   }

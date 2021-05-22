@@ -40,12 +40,12 @@
 
     <ion-item>
       <ion-label position="floating">Tu reseña/comentarios del la pelicula</ion-label>
-      <ion-input formControlName="reseña" placeholder="Lo más epico del DC XD"></ion-input>
+      <ion-input formControlName="resena" placeholder="Lo más epico del DC XD"></ion-input>
     </ion-item>
     <div>
       <ng-container *ngFor="let validaciones of mensajesVal.datos">
-        <div *ngIf="datosForm.get('reseña').hasError(validaciones.type) &&
-                    (datosForm.get('reseña').dirty || datosForm.get('reseña').touched)">
+        <div *ngIf="datosForm.get('resena').hasError(validaciones.type) &&
+                    (datosForm.get('resena').dirty || datosForm.get('resena').touched)">
         {{validaciones.message}}
         </div>
       </ng-container>

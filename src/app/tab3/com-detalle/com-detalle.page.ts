@@ -46,7 +46,7 @@ export class ComDetallePage implements OnInit {
         Validators.pattern("^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$")
 
       ])),
-      reseña : new FormControl("", Validators.compose([
+      resena : new FormControl("", Validators.compose([
 
         Validators.required,
 

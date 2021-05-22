@@ -1,10 +1,11 @@
+import { SafeResourceUrl } from "@angular/platform-browser";
+
 export class Estrenos
 {
     titulo : string;
     genero : string;
-    porpaganda : string;
     disponible : string;
-    imgUrl : string;
     trailerUrl : string;
     fecha : string;
+    urlSafe:SafeResourceUrl;
 }

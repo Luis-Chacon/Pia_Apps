@@ -19,19 +19,9 @@
 
       <ion-card-content class="card-center">
 
-        <div class="ion-text-center" *ngIf= "estre.titulo == 'Fast And Furious 9' ">
-          <iframe width="330" height="250" src="https://www.youtube.com/embed/QJC2kxfZEfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="ion-text-center" >
+          <iframe width="330" height="250" [src]="estre.urlSafe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-
-        <div class="ion-text-center" *ngIf= "estre.titulo == 'Venom Let There Be Carnage' ">
-          <iframe width="330" height="250" src="https://www.youtube.com/embed/-ezfi6FQ8Ds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="ion-text-center" *ngIf= "estre.titulo == 'A Quiet Place 2' ">
-          <iframe width="330" height="250" [src]="sanitize(vid)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-          
-        <!-- <img src="{{estre.imgUrl}}" class="info-img"> -->
 
         <ion-item>
           <ion-icon></ion-icon>
@@ -42,12 +32,6 @@
           <ion-icon></ion-icon>
           <ion-label>Available:{{estre.disponible}}</ion-label>
         </ion-item>
-
-        <!-- <div class="centrado">
-          <ion-button size="large" fill="clear" href="{{estre.trailerUrl}}" target="_blank" >
-            <ion-icon name="film"></ion-icon>
-          </ion-button>
-        </div> -->
         
       </ion-card-content>
       
